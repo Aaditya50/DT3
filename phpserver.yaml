@@ -7,10 +7,14 @@ metadata:
     app: php
 spec:
   ports:
-    - port: 90
+  - port: 8080
+     targetPort: 90
+     nodePort: 31000
   selector:
     app: php
   type: NodePort
+  
+   
 ---
 
 #PVC to make Data Persistent of php
